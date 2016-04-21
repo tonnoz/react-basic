@@ -1,17 +1,20 @@
-var React = require('react');
+import React from 'react'
 
 
-var UserProfile = require('./Github/UserProfile');
-var Repos = require('./Github/Repos');
-var Notes = require('./Notes/Notes');
+import UserProfile  from './Github/UserProfile';
+import Repos from './Github/Repos';
+import Notes from './Notes/Notes';
 
-var ReactFireMixin = require('reactfire');
-var Firebase = require('firebase');
+
+import ReactFireMixin from 'reactfire'
+import Firebase from 'firebase'
+
+
 
 import getGithubInfo from '../utils/helpers';
 
 
-var Profile = React.createClass({
+const Profile = React.createClass({
   mixins: [ReactFireMixin],
   getInitialState: function(){
     return {

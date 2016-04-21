@@ -1,5 +1,4 @@
-var React = require('react');
-
+import React from 'react'
 
 const Repos = React.createClass({
   propTypes: {
@@ -13,7 +12,7 @@ const Repos = React.createClass({
           {repo.html_url && <h4><a href={repo.html_url}>{repo.name}</a> </h4>} {/*tricky way to make an if statement*/}
           {repo.description && <p> {repo.description} </p>}
         </li>
-      );
+      )
     });
 
     return (
