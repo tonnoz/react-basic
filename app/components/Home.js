@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Main = React.createClass({
+class Home extends React.Component{
   render() {
     return (
       <div>Search by Username above</div>
     );
   }
-});
+};
 
 
-module.exports = Main;
+export default Home;

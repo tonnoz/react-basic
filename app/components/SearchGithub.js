@@ -1,17 +1,17 @@
-import React from 'react'
-var Router = require('react-router');
+import React from 'react';
+import Router from 'react-router';
 
-const SearchGithub = React.createClass({
-  mixins:[Router.History],
+class SearchGithub extends React.Component{
+  mixins: [Router.History],
   getRef: function(ref){
     this.usernameRef = ref;
   },
-  handleSubmit:function(){
+  handleSubmit: function(){
     var username = this.usernameRef.value;
     this.usernameRef.value = '';
-    this.history.pushState(null, "/profile/"+ username); //this will change the current route to the profile route
+    this.history.pushState(null, "/profile/" + username)
   },
-  render() {
+  render: function(){
     return (
       <div className="col-sm-12">
         <form onSubmit={this.handleSubmit}>
@@ -19,12 +19,12 @@ const SearchGithub = React.createClass({
             <input type="text" className="form-control" ref={this.getRef} />
           </div>
           <div className="form-group col-sm-5">
-            <button type="submit" className="btn btn-block btn-primary"> Search Github </button>
+            <button type="submit" className="btn btn-block btn-primary">Search Github</button>
           </div>
         </form>
       </div>
-    );
+    )
   }
-});
+};
 
-module.exports = SearchGithub;
+export default SearchGithub;
